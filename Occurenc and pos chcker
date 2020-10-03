@@ -1,0 +1,15 @@
+import collections
+ans=collections.defaultdict(list)
+for i in range(len(b)):
+    for index,value in enumerate(a):
+        if b[i]==a[index]:
+            ans[value].append(index)
+print(len(ans))            
+for i in ans.keys():
+    keyy=ans[i]
+    if len(keyy)>3:
+        print(i,keyy[2]-keyy[1])
+    elif len(keyy)==2:
+        print(i,keyy[1]-keyy[0])    
+    else:
+        print(i,0)
